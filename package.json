@@ -1,0 +1,15 @@
+{
+  "name": "feishu-codex-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local bridge that receives Feishu commands and executes them with Codex on this Mac.",
+  "scripts": {
+    "start": "node ./src/server.mjs",
+    "check": "node --check src/*.mjs",
+    "smoke": "node ./src/smoke.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
