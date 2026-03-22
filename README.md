@@ -116,6 +116,12 @@ https://guance-codex.360timesai.com
 https://guance-codex.360timesai.com/feishu/events
 ```
 
+如果你希望 Mac 重启后也自动恢复 bridge 和固定 Tunnel，可以安装 `launchd` 开机自启：
+
+```bash
+zsh ./scripts/install-launchd.sh
+```
+
 默认监听：
 
 ```text

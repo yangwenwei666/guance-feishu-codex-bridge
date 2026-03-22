@@ -148,6 +148,30 @@ https://guance-codex.360timesai.com/health
 
 ## 七、建议的后续项
 
-- 固定 Cloudflare Tunnel
+- macOS 开机自启动（bridge + cloudflared）
 - 为高风险命令增加确认机制
 - GitHub 远端仓库创建与自动 push
+
+## 八、macOS 开机自启动
+
+仓库里已提供：
+
+- `scripts/start-bridge-daemon.sh`
+- `scripts/start-fixed-tunnel-daemon.sh`
+- `scripts/install-launchd.sh`
+
+安装后会创建两个 `LaunchAgent`：
+
+- `com.yangwenwei.guance.feishu-bridge`
+- `com.yangwenwei.guance.cloudflared-tunnel`
+
+对应作用：
+
+- bridge 开机后自动启动
+- 固定 Tunnel 开机后自动连回 `guance-codex.360timesai.com`
+
+安装命令：
+
+```bash
+zsh ./scripts/install-launchd.sh
+```
