@@ -116,19 +116,24 @@ Cloudflare 分配的 nameserver：
 ```bash
 cloudflared tunnel login
 cloudflared tunnel create guance-feishu-codex
-cloudflared tunnel route dns guance-feishu-codex <固定子域名>
-cloudflared tunnel run guance-feishu-codex
+cloudflared tunnel route dns guance-feishu-codex guance-codex.360timesai.com
+cloudflared tunnel --no-autoupdate run --url http://127.0.0.1:4319 guance-feishu-codex
 ```
 
-建议固定子域名示例：
+当前已实际绑定的固定子域名：
 
 - `guance-codex.360timesai.com`
-- `guance-feishu.360timesai.com`
 
 飞书回调地址改为：
 
 ```text
-https://<固定子域名>/feishu/events
+https://guance-codex.360timesai.com/feishu/events
+```
+
+健康检查地址：
+
+```text
+https://guance-codex.360timesai.com/health
 ```
 
 ## 六、已验证通过的功能
@@ -138,6 +143,7 @@ https://<固定子域名>/feishu/events
 - 群聊 `@机器人` 前缀兼容
 - 白名单校验
 - Cloudflare quick tunnel 联通
+- Cloudflare 固定域名 `guance-codex.360timesai.com` 联通
 - GitHub SSH 认证联通
 
 ## 七、建议的后续项

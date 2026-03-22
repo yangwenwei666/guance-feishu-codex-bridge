@@ -98,6 +98,24 @@ zsh ./scripts/start-quick-tunnel.sh
 2. 打开一个 `trycloudflare.com` 临时公网地址
 3. 你把这个地址后面拼上 `/feishu/events`，填到飞书事件回调里
 
+如果你已经完成了 Cloudflare 登录、命名 tunnel 创建和 DNS 绑定，也可以直接起固定 tunnel：
+
+```bash
+zsh ./scripts/start-fixed-tunnel.sh
+```
+
+当前已验证的固定地址：
+
+```text
+https://guance-codex.360timesai.com
+```
+
+飞书回调地址可改成：
+
+```text
+https://guance-codex.360timesai.com/feishu/events
+```
+
 默认监听：
 
 ```text
@@ -182,10 +200,10 @@ curl -X POST http://127.0.0.1:4319/bridge/send \
 - Cloudflare quick tunnel 可用
 - 本机到 GitHub 的 SSH 认证已打通
 
-当前仍在等待：
+当前也已经验证：
 
-- `360timesai.com` 在 Cloudflare 完成 nameserver 生效
-- 切换到固定子域名的正式 tunnel
+- `360timesai.com` 已在 Cloudflare 生效
+- 固定子域名 `guance-codex.360timesai.com` 可访问本地 bridge
 
 ## 上传到 GitHub
 
