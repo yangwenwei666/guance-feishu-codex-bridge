@@ -39,7 +39,7 @@ cat > "$BRIDGE_PLIST" <<PLIST
   <key>EnvironmentVariables</key>
   <dict>
     <key>PATH</key>
-    <string>/opt/homebrew/bin:/opt/homebrew/opt/node@22/bin:/usr/local/bin:/usr/bin:/bin</string>
+    <string>/Applications/Codex.app/Contents/Resources:/opt/homebrew/bin:/opt/homebrew/opt/node@22/bin:/usr/local/bin:/usr/bin:/bin</string>
     <key>BRIDGE_CONFIG_PATH</key>
     <string>${RUNTIME_DIR}/bridge.config.json</string>
   </dict>
@@ -72,7 +72,7 @@ cat > "$TUNNEL_PLIST" <<PLIST
   <key>EnvironmentVariables</key>
   <dict>
     <key>PATH</key>
-    <string>/opt/homebrew/bin:/opt/homebrew/opt/node@22/bin:/usr/local/bin:/usr/bin:/bin</string>
+    <string>/Applications/Codex.app/Contents/Resources:/opt/homebrew/bin:/opt/homebrew/opt/node@22/bin:/usr/local/bin:/usr/bin:/bin</string>
     <key>TUNNEL_NAME</key>
     <string>guance-feishu-codex</string>
     <key>LOCAL_URL</key>
