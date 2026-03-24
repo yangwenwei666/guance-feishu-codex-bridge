@@ -1,0 +1,4 @@
+interface:
+  display_name: "Guance Launcher Deploy"
+  short_description: "Deploy or validate Guance via launcher"
+  default_prompt: "Use $guance-launcher-deploy to perform or troubleshoot a Guance self-built launcher deployment with the online or offline path, including optional DataWay and DataKit validation."
